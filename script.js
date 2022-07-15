@@ -21,7 +21,7 @@ const getRandomHero = (id) => {
     .then(response => response.json())
     .then(json => {
         // console.log(json)
-        superHeroImage.innerHTML = `<img src ='${json.image.url}' height="300px" width= "300px"/>`
+        superHeroImage.innerHTML = `<img src ='${json.image.url}' height="280px" width= "280px"/>`
         heroname.innerHTML = `<h2>${json.name}</h2>`
         getStatsHTML(json)
 })
@@ -32,7 +32,7 @@ const getSearchedSuperHero = (searchedName) =>{
     .then(response => response.json())
     .then(json => {
         // console.log(json.results[0])
-        superHeroImage.innerHTML = `<img src ='${json.results[0].image.url}' height="300px" width= "300px"/>`
+        superHeroImage.innerHTML = `<img src ='${json.results[0].image.url}' height="280px" width= "280px"/>`
         heroname.innerHTML = `<h2>${json.results[0].name}</h2>`
         getStatsHTML(json.results[0])
 })
